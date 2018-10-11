@@ -8,14 +8,14 @@ import { Pizza } from './pizza';
 })
 export class PizzaService {
 
-  URL = "https://lpa2sgadot.herokuapp.com/"
+  URL = 'https://lpa2sgadot.herokuapp.com/';
 
   constructor(
     private http: HttpClient
   ) { }
 
-  public listPizzas(): Observable<Pizza[]>{
-    return this.http.get<Pizza[]>(this.URL + '/pizzas.json')
+  public listPizzas(): Observable<Pizza[]> {
+    return this.http.get<Pizza[]>(this.URL + '/pizzas.json');
   }
 
 }

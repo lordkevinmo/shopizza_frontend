@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {Location} from '@angular/common';
+import {Component, Input, OnInit} from '@angular/core';
+import {Pizza} from '../pizza';
+import {PizzaService} from '../pizza.service';
 
 @Component({
   selector: 'app-pizzadetails',
@@ -7,7 +11,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PizzadetailsComponent implements OnInit {
 
-  constructor() { }
+  @Input() pizza: Pizza;
+  constructor(
+      private activateRoute: ActivatedRoute,
+      private location: Location,
+      private pizzaService: PizzaService
+  ) { }
 
   ngOnInit() {
   }

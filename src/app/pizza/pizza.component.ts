@@ -7,8 +7,7 @@ import { Pizza } from '../pizza';
   styleUrls: ['./pizza.component.css']
 })
 export class PizzaComponent implements OnInit {
-  
-  @Input() pizza: Pizza
+  @Input() pizza: Pizza;
   constructor() { }
 
   ngOnInit() {

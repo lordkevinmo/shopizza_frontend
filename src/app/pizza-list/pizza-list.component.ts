@@ -10,12 +10,11 @@ import { PizzaService } from '../pizza.service';
 export class PizzaListComponent implements OnInit {
 
 
-  pizza: Array<Pizza> = []
-  
+  pizza: Array<Pizza> = [];
   constructor(private pizzaService: PizzaService) { }
 
   ngOnInit() {
-    this.pizzaService.listPizzas().subscribe(pizzas => this.pizza = pizzas)
+    this.pizzaService.listPizzas().subscribe(pizzas => this.pizza = pizzas);
   }
 
 }
