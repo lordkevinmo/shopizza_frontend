@@ -1,3 +1,25 @@
-<div>
-  <h2>{{pizza.name | uppercase}} détails</h2>
+<div class="det-titre">
+  <h2>Détails sur la Pizza</h2>
+  <h4>Passez le cap! et Passez la commande</h4>
 </div>
+<div class="row detail">
+    <div class="col-4">
+      <div class="card affiche-detail">
+        <img src="{{pizza.url}}" class="card-img-top" alt="image de la pizza">
+        <div class="card-body">
+          <h2>{{pizza.name | uppercase}}</h2>
+          <p>Prix: {{pizza.price}} €</p>
+          <a class="card-link btn btn-success">Payer</a>
+          <button (click)="goBack()" class="btn btn-danger">Go back</button>
+        </div>
+      </div>
+    </div>
+    <div class="col shadow-lg mx-5">
+      <h3> Description</h3>
+      <p>Lorem Ipsum. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <p>Lorem Ipsum. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <p>Lorem Ipsum. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <p>Lorem Ipsum. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <p>Lorem Ipsum. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>

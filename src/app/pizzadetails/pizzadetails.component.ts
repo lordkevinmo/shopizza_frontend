@@ -10,8 +10,7 @@ import {PizzaService} from '../pizza.service';
   styleUrls: ['./pizzadetails.component.css']
 })
 export class PizzadetailsComponent implements OnInit {
-
-  @Input() pizza: Pizza;
+  pizza: Pizza;
   constructor(
       private activateRoute: ActivatedRoute,
       private location: Location,
@@ -19,6 +18,17 @@ export class PizzadetailsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+      this.getPizza();
   }
+
+  getPizza(): void {
+      const id = +this.activateRoute.snapshot.paramMap.get('id');
+      this.pizzaService.getPizza(id)
+          .subscribe(pizza => this.pizza = pizza);
+    }
+
+    goBack(): void {
+      this.location.back();
+    }
 
 }

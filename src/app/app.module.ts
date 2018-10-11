@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { PizzaComponent } from './pizza/pizza.component';
 import { PizzaListComponent } from './pizza-list/pizza-list.component';
 import { PizzadetailsComponent } from './pizzadetails/pizzadetails.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
