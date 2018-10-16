@@ -9,7 +9,7 @@
         <div class="card-body">
           <h2>{{pizza.name | uppercase}}</h2>
           <p>Prix: {{pizza.price}} €</p>
-          <a class="card-link btn btn-success">Payer</a>
+          <ngx-paypal [config]="payPalConfig"></ngx-paypal>
           <button (click)="goBack()" class="btn btn-danger">Go back</button>
         </div>
       </div>
