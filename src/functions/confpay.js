@@ -1,4 +1,5 @@
 const request = require('request');
+const queryString = require('query-string');
 exports.handler = function(event, context, callback) {
     console.log('Received event:', JSON.stringify(event, null, 2));
 
@@ -35,7 +36,7 @@ exports.handler = function(event, context, callback) {
             if (body.substring(0, 8) === 'VERIFIED') {
 
                 //The IPN is verified
-                console.log(JSON.stringify(JSON.parse(body), null, 2));
+                console.log( queryString.parse(body), null, 2);
             } else if (body.substring(0, 7) === 'INVALID') {
 
                 //The IPN invalid
