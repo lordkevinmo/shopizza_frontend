@@ -1,3 +1,4 @@
+const request = require('request');
 exports.handler = function(event, context, callback) {
     // your server-side functionality
     console.log('Received event:', JSON.stringify(event, null, 2));
