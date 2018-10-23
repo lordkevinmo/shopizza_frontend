@@ -36,7 +36,7 @@ exports.handler = function(event, context, callback) {
             if (body.substring(0, 8) === 'VERIFIED') {
 
                 //The IPN is verified
-                console.log( queryString.parse(body), null, 2);
+                console.log(JSON.stringify(queryString.parse(body), null, 2));
             } else if (body.substring(0, 7) === 'INVALID') {
 
                 //The IPN invalid
