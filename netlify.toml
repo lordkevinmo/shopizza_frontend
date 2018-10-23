@@ -1,2 +1,2 @@
 [build]
-    functions = "src/function_out"
+    functions = "src/functions_out"
