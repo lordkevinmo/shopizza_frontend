@@ -5,7 +5,7 @@ exports.handler = function(event, context, callback) {
     //Return 200 to caller
     callback(null, {
         statusCode: 200,
-        body: "Hello"
+        body: ""
     });
 
     //Read the IPN message sent from PayPal and prepend 'cmd=_notify-validate'
@@ -35,7 +35,7 @@ exports.handler = function(event, context, callback) {
             if (body.substring(0, 8) === 'VERIFIED') {
 
                 //The IPN is verified
-                console.log('Verified IPN!');
+                console.log(JSON.stringify(JSON.parse(body), null, 2));
             } else if (body.substring(0, 7) === 'INVALID') {
 
                 //The IPN invalid
